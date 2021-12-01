@@ -1,0 +1,10 @@
+alias nv='nvim'
+alias ll='ls -lah'
+
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+
+# set alias for zsh stack of visited directories
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
