@@ -13,7 +13,7 @@ autoload -Uz compinit; compinit
 _comp_options+=(globdots)
 
 # add file to improve auto-completion from prezto framework
-source $HOME/dotfiles/zsh/external/completion.zsh
+source $DOTFILES/zsh/external/completion.zsh
 
 #in /zsh/external will be put all scripts that are imported from others
 # autoload it automatically:

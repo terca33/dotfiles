@@ -1,0 +1,6 @@
+for now I wont be configuring udiskie
+because there is not easy way to map /run/media/<user>/USB-1
+to /media so I will just add symbolic link 
+
+when using this config file it
+has to be mapped into $XDG_HOME_CONFIG/udiskie/config.yml

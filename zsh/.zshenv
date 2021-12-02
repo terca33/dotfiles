@@ -25,6 +25,7 @@ export HISTSIZE=10000
 # Maximum events in history file
 export SAVEHIST=10000
 
+#IMPORTANT for setting up install.sh and .zshrc
 export DOTFILES="$HOME/dotfiles"
 
 # fzf and ripgrep in place of find
