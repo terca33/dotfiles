@@ -1,9 +1,0 @@
-awk/scw_config.awk
-i3/config
-install.sh
-nvim/autoload/plug.vim
-nvim/init.vim
-tmux/tmux.conf
-zsh/.zshenv
-zsh/.zshrc
-zsh/aliases
