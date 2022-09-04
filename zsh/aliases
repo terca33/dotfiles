@@ -5,6 +5,29 @@ alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
 
+alias r='. ranger'
+
 # set alias for zsh stack of visited directories
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+# tmux aliases
+alias tmuxa='tmux attach-session -t '
+alias tmuxn='tmux new-session -s '
+
+# file ops
+alias rsync='rs'
+
+# window manager interaction
+alias wm='wmctrl'
+alias wl='wmctrl -lp'
+
+# set dual-monitor
+## left of laptop built-in screen
+alias monitor-left='xrandr --output HDMI-1 --auto --left-of LVDS-1'
+## right of laptop built-in screen
+alias monitor-right='xrandr --output HDMI-1 --auto --right-of LVDS-1'
+
+# run keychain to add all listed ssh keys (if new are added in ~/.ssh/ add them here)
+# needs to be run on every reboot of system but will persist through logout-logins
+alias ssh-start='eval $(keychain --eval --agents ssh id_ed25519)'

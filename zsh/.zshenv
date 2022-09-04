@@ -31,3 +31,7 @@ export DOTFILES="$HOME/dotfiles"
 # fzf and ripgrep in place of find
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# set up awk path
+export AWKPATH="$XDG_CONFIG_HOME/awk"
+. "$HOME/.cargo/env"

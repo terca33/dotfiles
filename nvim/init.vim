@@ -1,4 +1,4 @@
-" set ckipboard to work normally
+" set clipboard to work normally
 set clipboard+=unnamedplus
 
 " turn of arrow keys to force myself using hjkl
@@ -24,5 +24,29 @@ set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+
 "copy indent from current line when starting newline
 set autoindent
+
+" set horizontal split to h
+nnoremap <c-w>h <c-w>s
+
+"""""""""""
+" Plugins "
+"""""""""""
+
+call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
+    Plug 'chrisbra/csv.vim'
+    Plug 'simeji/winresizer'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'simnalamburt/vim-mundo'
+    Plug 'christoomey/vim-tmux-navigator'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+call plug#end()
+
+" remaping of Plugin keys
+" let g:winresizer_start_key="<leader>w"

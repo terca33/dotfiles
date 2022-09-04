@@ -70,6 +70,16 @@ if [ "$(tty)" = "/dev/tty1" ]; then
     pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
 fi
 
+# Ctrl-l is being used in tmux for jumping to right pane
+# so need to rebind clear
+bindkey -r '^l'
+bindkey -r '^g'
+bindkey -s '^g' 'clear\n'
+
+# run keychain on startup to start only one ssh-agent and enter needed passphrases only once
+# if new keys are added to ~/.ssh/ add them into script
+eval $(keychain -q --eval --agents ssh id_ed25519)
+
 # add syntax highlighting (first install with pacman)
 # keep this always at the bottome of .zshrc so everything loaded before can use it
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
