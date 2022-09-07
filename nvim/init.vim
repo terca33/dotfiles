@@ -36,17 +36,22 @@ nnoremap <c-w>h <c-w>s
 """""""""""
 
 call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
-    Plug 'chrisbra/csv.vim'
-    Plug 'simeji/winresizer'
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'simnalamburt/vim-mundo'
-    Plug 'christoomey/vim-tmux-navigator'
-    Plug 'neovim/nvim-lspconfig'
-    Plug 'hrsh7th/nvim-cmp'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-lua/plenary.nvim'
+"    Plug 'chrisbra/csv.vim'
+"    Plug 'simeji/winresizer'
+"    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"    Plug 'junegunn/fzf.vim'
+"    Plug 'simnalamburt/vim-mundo'
+"    Plug 'christoomey/vim-tmux-navigator'
+"    Plug 'neovim/nvim-lspconfig'
+"    Plug 'hrsh7th/nvim-cmp'
+"    Plug 'nvim-lua/plenary.nvim'
+"    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'arcticicestudio/nord-vim'
+"    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
+
+colorscheme nord
 
 " remaping of Plugin keys
 " let g:winresizer_start_key="<leader>w"

@@ -1,6 +1,7 @@
 [user]
 	name = mduvnjak
 	email = mduvnjak@protonmail.com
+	editor = nvim
 [init]
 	defaultBranch = main
 [core]
