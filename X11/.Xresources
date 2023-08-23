@@ -33,7 +33,10 @@
 *.color7: #e4e4e4
 *.color15: #ffffff
 
-URxvt*font: xft:Inconsolata Nerd Font Mono:style=Medium:size=10:pixelsize=16:antialias=true
+URxvt*font: xft:Inconsolata Nerd Font Mono:style=Medium:size=12:pixelsize=16:antialias=true
+URxvt*boldFont: xft:Inconsolata Nerd Font Mono:style=Bold:size=12:pixelsize=16:antialias=true
+URxvt*italicFont: xft:Iosevka Nerd Font Mono:style=Italic:size=12:pixelsize=16:antialias=true
+URxvt*boldItalicFont: xft:Iosevka Nerd Font Mono:style=Bold Italic:size=12:pixelsize=16:antialias=true
 URxvt*letterSpace: -1
 URxvt*borderLess: false
 URxvt*externalBorder: 0

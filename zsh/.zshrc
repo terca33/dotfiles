@@ -80,6 +80,9 @@ bindkey -s '^g' 'clear\n'
 # if new keys are added to ~/.ssh/ add them into script
 eval $(keychain -q --eval --agents ssh id_ed25519)
 
+# turn off annoying beeps in console
+setterm --blength 0
+
 # add syntax highlighting (first install with pacman)
 # keep this always at the bottome of .zshrc so everything loaded before can use it
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

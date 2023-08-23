@@ -7,6 +7,8 @@ alias gp='git push'
 
 alias r='. ranger'
 
+alias networkgui='nmtui'
+
 # set alias for zsh stack of visited directories
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
@@ -14,9 +16,6 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 # tmux aliases
 alias tmuxa='tmux attach-session -t '
 alias tmuxn='tmux new-session -s '
-
-# file ops
-alias rsync='rs'
 
 # window manager interaction
 alias wm='wmctrl'

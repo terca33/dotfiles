@@ -41,16 +41,17 @@ call plug#begin("$XDG_CONFIG_HOME/nvim/plugged")
 "    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "    Plug 'junegunn/fzf.vim'
 "    Plug 'simnalamburt/vim-mundo'
-"    Plug 'christoomey/vim-tmux-navigator'
+    Plug 'christoomey/vim-tmux-navigator'
 "    Plug 'neovim/nvim-lspconfig'
 "    Plug 'hrsh7th/nvim-cmp'
 "    Plug 'nvim-lua/plenary.nvim'
 "    Plug 'nvim-telescope/telescope.nvim'
     Plug 'arcticicestudio/nord-vim'
 "    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
+" set termguicolors
 colorscheme nord
 
 " remaping of Plugin keys

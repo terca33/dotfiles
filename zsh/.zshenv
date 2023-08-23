@@ -37,4 +37,4 @@ export AWKPATH="$XDG_CONFIG_HOME/awk"
 . "$HOME/.cargo/env"
 
 # for use by i3-sensible-terminal launcher
-export TERMINAL="alacritty"
+export TERMINAL="rxvt-unicode-256color"

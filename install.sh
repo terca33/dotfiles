@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# set zsh as default shell
+if [[ ! $0 =~ "-zsh" ]]; then
+    chsh -s $(which zsh)
+fi
+
 ########
 # nvim #
 ########
@@ -80,3 +85,19 @@ ln -s "$DOTFILES/git" "$XDG_CONFIG_HOME/git"
 
 mkdir -p "$XDG_CONFIG_HOME/tmux"
 ln -sf "$DOTFILES/tmux/tmux.conf" "$XDG_CONFIG_HOME/tmux/tmux.conf"
+
+# install Plugins
+[ ! -d "$XDG_CONFIG_HOME/tmux/plugins/tpm" ] \
+    && git clone https://github.com/tmux-plugins/tpm \
+    "$XDG_CONFIG_HOME/tmux/plugins/tpm"
+
+# tmux session templates
+rm -rf "$XDG_CONFIG_HOME/tmuxp"
+ln -s "$DOTFILES/tmuxp" "$XDG_CONFIG_HOME/tmuxp"
+
+###########
+# zathura #
+###########
+
+mkdir -p "$XDG_CONFIG_HOME/zathura"
+ln -sf "$DOTFILES/zathura/zathurarc" "$XDG_CONFIG_HOME/zathura/zathurarc"
