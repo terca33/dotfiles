@@ -84,9 +84,10 @@ eval $(keychain -q --eval --agents ssh id_ed25519)
 # turn off annoying beeps in console
 # setterm --blength 0
 
-# setup pyenv completion
-eval "$(pyenv init -)"
-
+# enable pyenv shims (python redirecting)
+if command -v pyenv 1>/dev/null 2>&1; then
+   eval "$(pyenv init -)" 
+fi
 # add syntax highlighting (first install with pacman)
 # keep this always at the bottome of .zshrc so everything loaded before can use it
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
