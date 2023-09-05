@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# set zsh as default shell
-if [[ ! $0 =~ "-zsh" ]]; then
-    chsh -s $(which zsh)
-fi
-
 ########
 # nvim #
 ########
@@ -43,7 +38,10 @@ ln -s "$DOTFILES/i3" "$XDG_CONFIG_HOME/i3"
 #######
 
 mkdir -p "$XDG_CONFIG_HOME/zsh"
+# for first .zshenv invocation
 ln -sf "$DOTFILES/zsh/.zshenv" "$HOME"
+# after initial sourcing, subsequent zsh shells will source .zshenv from $ZDOTDIR
+ln -sf "$DOTFILES/zsh/.zshenv" "$XDG_CONFIG_HOME/zsh"
 ln -sf "$DOTFILES/zsh/.zshrc" "$XDG_CONFIG_HOME/zsh"
 ln -sf "$DOTFILES/zsh/aliases" "$XDG_CONFIG_HOME/zsh/aliases"
 rm -rf "$XDG_CONFIG_HOME/zsh/external"

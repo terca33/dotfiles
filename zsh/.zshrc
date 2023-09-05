@@ -6,6 +6,10 @@ setopt AUTO_PARAM_SLASH
 # make globing case insesitive
 unsetopt CASE_GLOB
 
+#in /zsh/external will be put all scripts that are imported from others,
+# autoload it automatically. Put this before compinit so it loads completion scripts in /external:
+fpath=($ZDOTDIR/external $fpath)
+
 # load a file containing shel commands to initialize completion
 autoload -Uz compinit; compinit
 
@@ -15,9 +19,6 @@ _comp_options+=(globdots)
 # add file to improve auto-completion from prezto framework
 source $DOTFILES/zsh/external/completion.zsh
 
-#in /zsh/external will be put all scripts that are imported from others
-# autoload it automatically:
-fpath=($ZDOTDIR/external $fpath)
 
 # load prompt setup
 autoload -Uz prompt_purification_setup; prompt_purification_setup
@@ -81,7 +82,10 @@ bindkey -s '^g' 'clear\n'
 eval $(keychain -q --eval --agents ssh id_ed25519)
 
 # turn off annoying beeps in console
-setterm --blength 0
+# setterm --blength 0
+
+# setup pyenv completion
+eval "$(pyenv init -)"
 
 # add syntax highlighting (first install with pacman)
 # keep this always at the bottome of .zshrc so everything loaded before can use it

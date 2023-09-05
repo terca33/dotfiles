@@ -34,7 +34,16 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # set up awk path
 export AWKPATH="$XDG_CONFIG_HOME/awk"
-. "$HOME/.cargo/env"
 
 # for use by i3-sensible-terminal launcher
 export TERMINAL="rxvt-unicode-256color"
+
+# PATH
+export PATH="$HOME/.local/bin:$PATH"
+
+# setup for python Poetry. see https://github.com/python-poetry/poetry/issues/1917#issuecomment-1380429197
+export PYTHON_KEYRING_BACKEND="keyring.backends.null.Keyring"
+
+# pyenv setup
+export PYENV_ROOT="$XDG_CONFIG_HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"

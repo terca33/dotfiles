@@ -6,6 +6,9 @@ setxkbmap -layout hr,us -option 'grp:caps_toggle'
 # CapsLock as Escape, and as Ctrl when pressed with another key
 # setxkbmap -option 'caps:ctrl_modifier'; xcape -e 'Caps_Lock=Escape'&
 
+# turn off anoying beeps
+xset b off
+
 xrdb -merge ~/.config/X11/.Xresources
 
 # run automatic mounting of block devices
