@@ -36,7 +36,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export AWKPATH="$XDG_CONFIG_HOME/awk"
 
 # for use by i3-sensible-terminal launcher
-export TERMINAL="rxvt-unicode-256color"
+export TERMINAL="alacritty"
 
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
