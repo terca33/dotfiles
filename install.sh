@@ -62,7 +62,8 @@ sudo ln -s "/run/media/$USER" "/media"
 # git #
 #######
 
-rm -rf "$XDG_CONFIG_HOME/git" "$HOME/.gitconfig"
+[[ -f "$HOME/.gitconfig" ]] && rm -f "$HOME/.gitconfig"
+rm -rf "$XDG_CONFIG_HOME/git"
 ln -s "$DOTFILES/git" "$XDG_CONFIG_HOME/git"
 
 ########
@@ -87,3 +88,10 @@ ln -s "$DOTFILES/tmuxp" "$XDG_CONFIG_HOME/tmuxp"
 
 mkdir -p "$XDG_CONFIG_HOME/zathura"
 ln -sf "$DOTFILES/zathura/zathurarc" "$XDG_CONFIG_HOME/zathura/zathurarc"
+
+#############
+# alacritty #
+#############
+
+rm -rf "$XDG_CONFIG_HOME/alacritty"
+ln -s "$DOTFILES/alacritty" "$XDG_CONFIG_HOME/alacritty"

@@ -21,7 +21,7 @@ vim.o.breakindent = true
 
 -- Save undo history
 vim.o.undofile = true
-vim.o.undodir = "$XDG_CONFIG_HOME/nvim/undo"
+vim.o.undodir = vim.fn.expand('$XDG_DATA_HOME/nvim/undo')
 vim.o.undolevels = 10000
 vim.o.undoreload = 10000
 
