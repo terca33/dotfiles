@@ -2,11 +2,19 @@
 
 vim.o.swapfile = false
 
+-- add colorcollumn on line 80
+vim.o.colorcolumn = 80
+vim.cmd[[highlight ColorColumn ctermbg=lightgrey guibg=lightgrey]]
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
--- Make line numbers default
+-- Turn on hybrid numbers (relative and apsolute only on current line) 
+vim.wo.number = true
 vim.wo.relativenumber = true
+
+-- Expand tabs
+vim.o.expandtab = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'

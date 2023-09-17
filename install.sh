@@ -95,3 +95,11 @@ ln -sf "$DOTFILES/zathura/zathurarc" "$XDG_CONFIG_HOME/zathura/zathurarc"
 
 rm -rf "$XDG_CONFIG_HOME/alacritty"
 ln -s "$DOTFILES/alacritty" "$XDG_CONFIG_HOME/alacritty"
+
+##########
+# python #
+##########
+
+# poetry dependency manager
+mkdir -p "$XDG_CONFIG_HOME/pypoetry"
+ln -sf "$DOTFILES/pypoetry/config.toml" "$XDG_CONFIG_HOME/pypoetry/config.toml"
