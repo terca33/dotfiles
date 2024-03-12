@@ -23,9 +23,9 @@ alias wl='wmctrl -lp'
 
 # set dual-monitor
 ## left of laptop built-in screen
-alias monitor-left='xrandr --output HDMI-1 --auto --left-of LVDS-1'
+alias monitor-left='xrandr --output HDMI-1 --auto --left-of eDP-1'
 ## right of laptop built-in screen
-alias monitor-right='xrandr --output HDMI-1 --auto --right-of LVDS-1'
+alias monitor-right='xrandr --output HDMI-1 --auto --right-of eDP-1'
 
 # run keychain to add all listed ssh keys (if new are added in ~/.ssh/ add them here)
 # needs to be run on every reboot of system but will persist through logout-logins

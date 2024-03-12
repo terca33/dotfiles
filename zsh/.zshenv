@@ -47,3 +47,7 @@ export PYTHON_KEYRING_BACKEND="keyring.backends.null.Keyring"
 # pyenv setup
 export PYENV_ROOT="$XDG_CONFIG_HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
+# set libvirt connection to local hypervisor as root ($ virsh uri = qemu:///system)
+# libvirt and virsh can be run without root
+export LIBVIRT_DEFAULT_URI='qemu:///system'

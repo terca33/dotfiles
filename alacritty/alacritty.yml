@@ -1,6 +1,9 @@
 env:
   TERM: xterm-256color
 
+font:
+  size: 8
+
 import:
   # uncomment the flavour you want below:
   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
